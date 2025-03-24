@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Footwear Finesse</title>
-    </head>
-  <body>
-    <div class="Logo">
-      <img src="Footwear Finesse Logo.jpg" alt="Logo">
-    </div>
-    <nav class="navbar">
-        <div class="Link-class">
-            <a href="index.html">Home</a>
-            <a href="Products.html">Products</a>
-            <a href="Trends.html">Trends</a>
-            <a href="aboutus.html">About us</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="Finessestyle.css">
+    <title>Shoes Website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="other">
+                <div class="links">
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000"><a href="">Home</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="">Shop</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="">Sale</a></div>
+                    <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="">Contact</a></div>
+                </div>
+                <div class="icons">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i></div>
+                </div>
+            </div>
         </div>
-        <div class="Search">
-        <input type="text" placeholder="Search..">
-        <button type="submit">Go</button>
-      </div>
+        <div class="dropdown">
+            <div class="links">
+                <div class="link"><a href="">Home</a></div>
+                <div class="link"><a href="">Shop</a></div>
+                <div class="link"><a href="">Sale</a></div>
+                <div class="link"><a href="">Contact</a></div>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
     </nav>
+    <section>
+        <div class="image" data-aos="zoom-in-right" data-aos-duration="2000">
+            <img src="main.png" alt="">
+        </div>
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-duration="1200" data-aos-delay="700">Nike</h2>
+            <h1 data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="900">Air Max <span>2090</span></h1>
+            <hr class="fir-line" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
+            <hr class="sec-line" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1100">
+            <p data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="1200">Bring the past into the future with the Nike Air Max 2090, a bold look inspired by the DNA of th eiconic Air Max 90. Brand-new NIke Air cushioning underfood adds unparalleled comfort while transparent mesh and vibrantly coloured details on teh upper are blended with timeless OG features for an edgy, modernised look.</p>
+            <div class="btn" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="1300"><button>Know More</button></div>
+            <div class="other-shoes">
+                <div class="shoes" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1500">
+                    <img src="main.png" alt="">
+                    <label for="">Jordan Max 200</label>
+                </div>
+                <div class="shoes" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1600">
+                    <img src="shoes1.png" alt="">
+                    <label for="">Jordan Air Zoom Super Rep</label>
+                </div>
+                <div class="shoes" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1700">
+                    <img src="shoes2.png" alt="">
+                    <label for="">Jordan Max Super Rep</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:1});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)"
+        }
 
-    <style>
-    body {
-      background-image: url("https://images.unsplash.com/photo-1530511250146-026c208e059e?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-color: #cccccc;
-     }
-      </style>
-      <h1>Fresh Kicks<br>For Every Style</h1>
-      <h3>Shop Now</h3>
-      
-      <h4>img here(2)</h4> <h2>The<br>Sneakers<br>Experts</h2>
+        function cancel(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-500px)"
+        }
 
-      <h4>We're passionate about footwear and<br> 
-        dedicated to providing you with the<br> 
-        latest trends and classic styles.<br> 
-        Discover our story and why we're your<br> 
-        go-to sneaker destination.</h4>
 
-        <h1>Store<br>Hours</h1>
-        <h3>TUESDAY - FRIDAY<br>9:00 AM - 7:00 PM</h3>
-        <h3>SATURDAY<br>9:00 AM - 5:00 PM</h3>
-
-        <footer> 2024 ALL Rights Reserved.</footer>
-
-  </body>
+    </script>
+</body>
 </html>
